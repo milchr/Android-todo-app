@@ -1,9 +1,12 @@
 package com.example.todoapp;
 
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 
 public class Data extends SQLiteOpenHelper {
@@ -32,5 +35,26 @@ public class Data extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    public boolean insertData(String item) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(TABLE_ROW_TASK, item);
+
+        Log.i("dodawanie", "dodawanie " + item + " do " + TABLE_NAME);
+        long result = db.insert(TABLE_NAME, null, contentValues);
+
+        if (result == -1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public Cursor getData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "SELECT * FROM " + TABLE_NAME;
+        Cursor data = db.rawQuery(query, null);
+        return data;
+    }
 
 }
