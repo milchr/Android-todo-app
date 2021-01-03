@@ -65,4 +65,12 @@ public class Data extends SQLiteOpenHelper {
         return data;
     }
 
+    public void updateData(String newTask, String taskToEdit, int id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "UPDATE " + TABLE_NAME + " SET " + COLUMN_TASK +
+                " = '" + newTask + "' WHERE " + COLUMN_ID +
+                " = '" + id + "' AND " + COLUMN_TASK + " = '" + taskToEdit + "'";
+        db.execSQL(query);
+    }
+
 }

@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                     insertData(newTask);
                     editText.setText("");
                 } else {
-                    toastMessage("Wpisz conajmniej 3 litery");
+                    toastMessage("Wpisz conajmniej 3 znaki");
                 }
             }
         });
