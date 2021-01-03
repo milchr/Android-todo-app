@@ -55,10 +55,11 @@ public class taskActivity extends AppCompatActivity {
                 Cursor dataItemId = data.getId(item);
 
                 int itemId = -1;
-                while(dataItemId.moveToNext()){
+                while (dataItemId.moveToNext()) {
                     itemId = dataItemId.getInt(0);
                 }
-                if(itemId > -1){
+
+                if (itemId > -1) {
                     Intent edit = new Intent(taskActivity.this, EditTaskActivity.class);
                     edit.putExtra("id", itemId);
                     edit.putExtra("task", item);
@@ -67,6 +68,4 @@ public class taskActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }

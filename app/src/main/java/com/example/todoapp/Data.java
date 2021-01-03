@@ -73,4 +73,10 @@ public class Data extends SQLiteOpenHelper {
         db.execSQL(query);
     }
 
+    public void deleteData(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "DELETE FROM " + TABLE_NAME + " WHERE " + COLUMN_ID + " = '" + id + "'";
+        db.execSQL(query);
+    }
+
 }
