@@ -7,7 +7,7 @@
 * [Features](#features)
 
 ## General info
-Simple android app to organize tasks created with Android Studio and SQLite Database. 
+Simple android app to your organize tasks. The app has been created with Android Studio and SQLite Database. 
 
 The app is a student project.
 
@@ -23,3 +23,7 @@ The application is designed for Android 6.0 (API 23 Marshmallow) version or high
 ## Features
 * Save your to-do tasks to the list
 * Edit or delete your tasks
+* Displays a list of to-do tasks
+
+## Status
+*In progress*
