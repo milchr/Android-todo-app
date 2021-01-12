@@ -31,7 +31,7 @@ public class EditTaskActivity extends AppCompatActivity {
         taskToEditId = intent.getIntExtra("id", -1);
         taskToEdit = intent.getStringExtra("task");
         editText.setText(taskToEdit);
-        Intent taskActivity = new Intent(EditTaskActivity.this, taskActivity.class);
+        Intent taskActivity = new Intent(EditTaskActivity.this, TaskActivity.class);
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override

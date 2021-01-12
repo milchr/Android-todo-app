@@ -14,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
-public class taskActivity extends AppCompatActivity {
+public class TaskActivity extends AppCompatActivity {
 
     Data data;
     private ListView listView;
@@ -33,7 +33,7 @@ public class taskActivity extends AppCompatActivity {
         addTaskActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(taskActivity.this, MainActivity.class);
+                Intent intent = new Intent(TaskActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -60,7 +60,7 @@ public class taskActivity extends AppCompatActivity {
                 }
 
                 if (itemId > -1) {
-                    Intent edit = new Intent(taskActivity.this, EditTaskActivity.class);
+                    Intent edit = new Intent(TaskActivity.this, EditTaskActivity.class);
                     edit.putExtra("id", itemId);
                     edit.putExtra("task", item);
                     startActivity(edit);

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#eeeeee"
-    tools:context=".taskActivity">
+    tools:context=".TaskActivity">
 
     <ListView
         android:id="@+id/listViewTasks"
